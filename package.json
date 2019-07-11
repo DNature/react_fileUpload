@@ -1,0 +1,27 @@
+{
+    "name": "react_fileupload",
+    "version": "1.0.0",
+    "description": "File uploader with progress bar using reactjs and nodejs",
+    "main": "server.js",
+    "engines": {
+        "node": "12.3.1"
+    },
+    "scripts": {
+        "client-install": "npm install --prefix client",
+        "start": "node server.js",
+        "server": "nodemon server.js",
+        "client": "npm start --prefix client",
+        "dev": "concurrently \"npm run server\" \"npm run client\"",
+        "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
+    },
+    "author": "Divine Nature",
+    "license": "MIT",
+    "dependencies": {
+        "express": "^4.17.1",
+        "express-fileupload": "^1.1.5"
+    },
+    "devDependencies": {
+        "concurrently": "^4.1.0",
+        "nodemon": "^1.19.1"
+    }
+}
